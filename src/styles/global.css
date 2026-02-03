@@ -1,0 +1,16 @@
+/* Importamos Tailwind v4 */
+@import "tailwindcss";
+
+/* Definimos tus colores directamente aquí (Tema) */
+@theme {
+  --color-brand-red: #E31E24;
+  --color-brand-dark: #0A0A0A;
+  --color-brand-gray: #1A1A1A;
+  --color-brand-accent: #2A2A2A;
+}
+
+/* Estilos base */
+body {
+  /* Ahora sí va a reconocer bg-brand-dark */
+  @apply bg-brand-dark text-white font-sans;
+}
