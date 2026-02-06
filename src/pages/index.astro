@@ -1,25 +1,47 @@
 ---
-// Importamos tus componentes de React
-// Nota: .. indica "subir un nivel" para salir de 'pages' y buscar en 'components'
 import Navbar from '../components/Navbar';
 import Hero from '../sections/Hero';
 import Services from '../sections/Services';
 import About from '../sections/About';
 import Contact from '../sections/Contact';
-import '../styles/global.css';
 import Footer from '../sections/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
+import '../styles/global.css';
+
+// Datos para SEO
+const title = "Consorcio Up - Administración de Consorcios en CABA";
+const description = "Gestión profesional, transparente y eficiente para edificios en Buenos Aires. Liderado por la Dra. Aldana Freitas Abuin y Lucas.";
+const siteUrl = "https://tu-url-de-vercel.vercel.app"; // Reemplaza con tu URL real
+const ogImage = "/hero-bg.jpg"; // La foto de Puerto Madero se verá en la vista previa
 ---
 
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/jpg" href="/logo.jpg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Consorcio Up - Administración de Consorcios</title>
+		
+		<title>{title}</title>
+		<meta name="description" content={description} />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={siteUrl} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={ogImage} />
+
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={ogImage} />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 	</head>
-	<body class="bg-brand-dark min-h-screen">
-        <Navbar />
+	<body class="bg-brand-dark min-h-screen font-sans">
+		<Navbar />
 		
 		<main>
 			<Hero />
@@ -27,5 +49,9 @@ import Footer from '../sections/Footer';
 			<About />
 			<Contact />
 		</main>
+
+		<Footer />
+		
+		<WhatsAppButton client:visible />
 	</body>
 </html>

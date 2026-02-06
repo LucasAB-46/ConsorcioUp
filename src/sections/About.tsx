@@ -1,40 +1,45 @@
 import React from 'react';
+import { Shield, Zap, Scale } from 'lucide-react';
 
-const About: React.FC = () => {
+const About = () => {
   return (
-    <section id="nosotros" className="py-24 bg-brand-gray/30">
+    <section id="nosotros" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          
-          {/* Imagen de stock profesional */}
-          <div className="relative">
-            <div className="absolute -top-4 -left-4 w-24 h-24 bg-brand-red -z-10 rounded-lg"></div>
-            <img 
-                src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                alt="Administradores profesionales" 
-                className="rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 object-cover w-full h-[500px]"
-            />
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-black text-brand-dark mb-4 uppercase italic">Sobre Nosotros</h2>
+          <div className="w-24 h-2 bg-brand-red mx-auto"></div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6 text-lg text-gray-700">
+            <p>
+              En <strong className="text-brand-dark">Consorcio Up</strong>, unimos dos pilares fundamentales para la administración moderna: la <strong>seguridad jurídica</strong> y la <strong>innovación tecnológica</strong>.
+            </p>
+            <p>
+              Nuestro equipo está liderado por la <strong>Dra. Aldana Freitas Abuin</strong>, abogada especializada, aportando un respaldo legal sólido en cada decisión, y <strong>Lucas</strong>, experto en sistemas, garantizando procesos ágiles, digitales y transparentes.
+            </p>
+            <p className="bg-brand-dark text-white p-6 rounded-2xl italic shadow-xl">
+              "No solo administramos edificios; elevamos la calidad de vida de los vecinos mediante una gestión presente, honesta y eficiente."
+            </p>
           </div>
 
-          <div className="space-y-6">
-            <h2 className="text-4xl font-black text-white uppercase italic">
-              Lucas & Aldana
-            </h2>
-            <p className="text-brand-red font-bold">Administradores de Consorcio Matriculados en CABA</p>
-            <p className="text-gray-400 text-lg leading-relaxed">
-              Sabemos que la administración de un edificio es, ante todo, una cuestión de confianza. Por eso, en <strong>Consorcio Up</strong>, nos alejamos del modelo tradicional de oficinas cerradas.
-            </p>
-            <p className="text-gray-400 text-lg leading-relaxed">
-              Nos enfocamos en la <strong>cercanía con el vecino</strong> y en el uso de herramientas tecnológicas que permiten que cada propietario sepa exactamente en qué se invierte su dinero.
-            </p>
-            <div className="pt-4">
-              <div className="flex items-center gap-4 text-white font-bold">
-                <div className="w-12 h-[2px] bg-brand-red"></div>
-                Transparencia y Eficacia
+          <div className="grid grid-cols-1 gap-6">
+            <div className="bg-gray-50 p-8 rounded-2xl border-l-8 border-brand-red shadow-sm">
+              <div className="flex items-center gap-4 mb-4">
+                <Scale className="text-brand-red w-8 h-8" />
+                <h3 className="font-bold text-xl text-brand-dark uppercase">Respaldo Legal</h3>
               </div>
+              <p className="text-gray-600">Asesoramiento jurídico integral para prevenir conflictos y asegurar el cumplimiento de todas las normativas vigentes.</p>
+            </div>
+
+            <div className="bg-gray-50 p-8 rounded-2xl border-l-8 border-brand-dark shadow-sm">
+              <div className="flex items-center gap-4 mb-4">
+                <Zap className="text-brand-dark w-8 h-8" />
+                <h3 className="font-bold text-xl text-brand-dark uppercase">Gestión Digital</h3>
+              </div>
+              <p className="text-gray-600">Implementamos soluciones tecnológicas para que la información del consorcio esté siempre disponible y clara para los propietarios.</p>
             </div>
           </div>
-
         </div>
       </div>
     </section>
