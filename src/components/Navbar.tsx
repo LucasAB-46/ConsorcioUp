@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
               Nosotros
             </a>
             <a 
-              href="https://wa.me/541124076777" 
+              href="https://wa.me/541124076677" 
               target="_blank" 
               className="bg-brand-red text-white px-5 py-2 rounded-lg font-bold hover:bg-red-700 transition-all shadow-lg shadow-brand-red/20"
             >

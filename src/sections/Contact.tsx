@@ -18,7 +18,7 @@ const Contact = () => {
               <div className="space-y-8">
                 {/* Teléfono / WhatsApp interactivo */}
                 <a 
-                  href="https://wa.me/541124076777" 
+                  href="https://wa.me/541124076677" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 group cursor-pointer"
@@ -28,7 +28,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm text-white/70 font-medium">Llamanos o WhatsApp</p>
-                    <p className="font-bold text-lg group-hover:text-white transition-colors">11 2407 6777</p>
+                    <p className="font-bold text-lg group-hover:text-white transition-colors">11 2407 6677</p>
                   </div>
                 </a>
 
